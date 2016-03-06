@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutDash"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+	android:background="#263238">
+    
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:text="Flashlight now"
+        android:gravity="center"
+        android:orientation="horizontal" >      
+    </LinearLayout>
+    
+    <ScrollView
+         android:id="@+id/meuscroll1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/LinearLayout1"
+         android:background="#263238" >
+         
+         <LinearLayout
+	        android:id="@+id/linearLayout2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="314dp"
+	        android:layout_marginTop="30dp"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+       
+             <LinearLayout
+	            style="@style/style_layout" >
+	
+	            <Button
+	                android:id="@+id/bt_flash"
+	                android:text="@string/flashlight"
+	                style="@style/style_botoes"
+	                android:background="@drawable/seletor_lantarna"
+	                android:onClick="selecionarOpcao"
+	                 />
+	
+	            <Button
+	                android:id="@+id/bt_screen"
+	                android:text="@string/screen"
+	                style="@style/style_botoes"
+	                android:layout_marginLeft="35dp"
+	                android:background="@drawable/seletor_screen"
+	                android:onClick="selecionarOpcao"
+	                />
+                        
+       		 </LinearLayout>
+       		 
+       		 <LinearLayout
+            style="@style/style_layout"
+            android:layout_marginTop="30dp" >
+
+            <Button
+                android:id="@+id/bt_color"
+                android:text="@string/colorscreen"
+                style="@style/style_botoes"
+                android:background="@drawable/seletor_color"
+                android:onClick="selecionarOpcao"
+                 />
+            <Button
+                android:id="@+id/bt_doacao"
+                style="@style/style_botoes"
+                android:text="@string/payjuice"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/seletor_juice"
+                android:onClick="selecionarOpcao"
+                 />
+        </LinearLayout>
+   
+    	
+        <!--  <TextView
+	         android:id="@+id/flash"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_marginLeft="50dp"
+	         android:layout_marginTop="20dp"
+	         android:clickable="true"
+	         android:onClick="selecionarOpcao"
+	         android:text="@string/flashlight"
+	         android:textColor="#8B008B"
+	         android:textStyle="bold" />
+        
+         <TextView
+            android:id="@+id/screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/flash"
+            android:layout_marginRight="30dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao"
+            android:text="@string/screen"
+            android:textColor="#8B008B"
+            android:textStyle="bold" />
+         <TextView
+            android:id="@+id/color_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/flash"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao"
+            android:text="@string/colorscreen"
+            android:textColor="#8B008B"
+            android:textStyle="bold" />
+         
+         <TextView
+            android:id="@+id/donation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/color_screen"
+            android:layout_alignRight="@id/screen"
+            android:clickable="true"
+            android:onClick="selecionarOpcao"
+            android:text="@string/payjuice"
+            android:textColor="#8B008B"
+            android:textStyle="bold" />
+        -->
+         </LinearLayout> 
+      </ScrollView>
+      
+       <FrameLayout
+         android:id="@+id/propaganda"
+         android:layout_width="fill_parent"
+         android:layout_height="50dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true">
+         
+       <com.google.android.gms.ads.AdView
+           android:id="@+id/adView"
+           android:layout_width="fill_parent"
+           android:layout_height="50dp" 
+           ads:adSize="BANNER"
+           ads:adUnitId="ca-app-pub-7040951679419231/2112623107"/>
+       
+     </FrameLayout>
+
+</RelativeLayout>
