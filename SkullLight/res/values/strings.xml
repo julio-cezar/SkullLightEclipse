@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Best Flashlight</string>
-    <string name="title_activity_dashboard">Best Flashlight</string>
+    <string name="app_name">Skull light</string>
+    <string name="title_activity_dashboard">Skull light</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_flash">LED Flashlight</string>
-    <string name="title_activity_screen">Screen Flashlight</string>
-    <string name="title_activity_color_screen">Color Flashlight</string>
+    <string name="title_activity_flash">LED Skull</string>
+    <string name="title_activity_screen">skull Light</string>
+    <string name="title_activity_color_screen">More Skull</string>
     <string name="title_activity_donation">Donation</string>
-    <string name="title_activity_color_dashboard">Choose the color</string>
+    <string name="title_activity_color_dashboard">Choose the skull</string>
  	
  	<string name="flashlight">flashlight</string>
  	<string name="donationText">the developers of this app love orange and passion fruit juice, if you liked this app feel free to pay us a juice:)</string>

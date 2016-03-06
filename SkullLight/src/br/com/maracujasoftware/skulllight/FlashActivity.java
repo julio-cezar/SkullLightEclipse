@@ -1,37 +1,54 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
 
+import java.io.IOException;
+
+import br.com.maracujasoftware.skulllight.R;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.os.Bundle;
 import android.provider.Settings.SettingNotFoundException;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.Toast;
 
-public class ColorScreenActivity extends Activity {
+public class FlashActivity extends Activity {
 	
 	Integer oriBrightnessValue;
 	Boolean flashlightStatus = false; // false = off, true = on
-	//Camera mCamera = null;
+	Camera mCamera = null;
 	Parameters parameters;
-	LinearLayout colorscreenControl;
+	//LinearLayout lflashlightcontrol;
 	SurfaceView preview;
 	SurfaceHolder mHolder;
-	String cor;
-	TextView tvcolor;
+	private Button bt_toggle_flashlight;
+	 
+	private AdView adView_1;
+	private InterstitialAd interstitial;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// Remove title bar
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-					
+				
 		super.onCreate(savedInstanceState);
 		
 		// Retrieve the brightness value for future use
@@ -41,23 +58,53 @@ public class ColorScreenActivity extends Activity {
 			e.printStackTrace();
 		}
 		
-		setContentView(R.layout.activity_color_screen);
+		setContentView(R.layout.activity_flash);
 		
-		cor = getIntent().getExtras().getString("cor");
-		
-		colorscreenControl = (LinearLayout) findViewById(R.id.colorscreencontrol);
-		preview = (SurfaceView) findViewById(R.id.colorpreview);
+		//lflashlightcontrol = (LinearLayout) findViewById(R.id.flashlightcontrol);
+		preview = (SurfaceView) findViewById(R.id.Spreview);
 		mHolder = preview.getHolder();
 		
-		tvcolor = (TextView) findViewById(R.id.tvColorScreen);
-
-		colorscreenControl.setOnClickListener(new LinearLayout.OnClickListener(){
-			
+		bt_toggle_flashlight = (Button)findViewById(R.id.bt_toggle_flashlight);
+		bt_toggle_flashlight.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View arg0) {
+				
+				if (ContextCompat.checkSelfPermission(FlashActivity.this,
+		                Manifest.permission.CAMERA)
+		        != PackageManager.PERMISSION_GRANTED) {
+					ActivityCompat.requestPermissions(FlashActivity.this,
+			                new String[]{Manifest.permission.CAMERA},
+			                14);
+					
+				}else{
 				toggleFlashLight();
+				}
+				// Turn off the cam if it is on
+				/*turnOffFlashLight();
+				if (mCamera != null) {
+					mCamera.release();
+					mCamera = null;
+				}*/
+				
 			}
 		});
+		
+		adView_1 = (AdView)this.findViewById(R.id.adViewFlashlight);
+	    AdRequest adRequest = new AdRequest.Builder()
+	    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+	    .addTestDevice("F0777154C5F794B0B7A1EF4120502169")
+	    .build();
+	    adView_1.loadAd(adRequest);
+	    
+	    interstitial = new InterstitialAd(this);
+ 		interstitial.setAdUnitId("ca-app-pub-7040951679419231/8039465107");
+ 		interstitial.loadAd(adRequest);
+ 		interstitial.setAdListener(new AdListener(){
+ 	          public void onAdLoaded(){
+ 	        	 interstitial.show();
+ 	          }
+ 	});
+		
 	}
 	
 	/**
@@ -77,11 +124,12 @@ public class ColorScreenActivity extends Activity {
 			turnOffFlashLight();
 			
 			// Turn off the cam if it is on
-			/*if (mCamera != null) {
+			if (mCamera != null) {
 				mCamera.release();
 				mCamera = null;
-			}*/
+			}
 		}
+		adView_1.pause();
 	}
 	
 	/**
@@ -109,6 +157,7 @@ public class ColorScreenActivity extends Activity {
 	    getWindow().setAttributes(layoutParams);
 	}
 	
+
 	/**
 	 * Toggle the flashlight on/off status
 	 */
@@ -120,6 +169,7 @@ public class ColorScreenActivity extends Activity {
 		}
 	}
 	
+
 	/**
 	 * Turn on the flashlight if the device has one.
 	 * Also set the background colour to white and brightness to max.
@@ -132,7 +182,7 @@ public class ColorScreenActivity extends Activity {
 		if (deviceHasFlashlight()) {
 			
 			// Switch on the cam for app's life
-			/*if (mCamera == null) {
+			if (mCamera == null) {
 				// Turn on Cam
 				mCamera = Camera.open();
 				try {
@@ -141,35 +191,20 @@ public class ColorScreenActivity extends Activity {
 					e.printStackTrace();
 				}
 				mCamera.startPreview();
-			}*/
+			}
 	
 			// Turn on LED
-			//parameters = mCamera.getParameters();
-			//parameters.setFlashMode(Parameters.FLASH_MODE_TORCH);
-			//mCamera.setParameters(parameters);
+			parameters = mCamera.getParameters();
+			parameters.setFlashMode(Parameters.FLASH_MODE_TORCH);
+			mCamera.setParameters(parameters);
+			//ibFlashLight.setImageResource(R.drawable.buttonon);
 		}
 		
 		// Set background color
-		
-		if(cor.equals("BLUE")) {
-			colorscreenControl.setBackgroundColor(Color.BLUE);
-			tvcolor.setTextColor(Color.BLUE);
-		}
-		else if (cor.equals("GREEN")) {
-			colorscreenControl.setBackgroundColor(Color.GREEN);
-			tvcolor.setTextColor(Color.GREEN);
-		}
-		else if (cor.equals("RED")) {
-			colorscreenControl.setBackgroundColor(Color.RED);
-			tvcolor.setTextColor(Color.RED);
-		}
-		else if (cor.equals("YELLOW")) {
-			colorscreenControl.setBackgroundColor(Color.YELLOW);
-			tvcolor.setTextColor(Color.YELLOW);
-		}		
+	//	lflashlightcontrol.setBackgroundColor(Color.WHITE);
 		
 		// Set brightness to max
-		setBrightness(100);
+		//setBrightness(100);
 		
 		// Self awareness
 		flashlightStatus = true;
@@ -181,21 +216,62 @@ public class ColorScreenActivity extends Activity {
 	 */
 	public void turnOffFlashLight() {
 		// Turn off flashlight
-		/*if (mCamera != null) {
+		if (mCamera != null) {
 			parameters = mCamera.getParameters();
 			if (parameters.getFlashMode().equals(Parameters.FLASH_MODE_TORCH)) {
 				parameters.setFlashMode(Parameters.FLASH_MODE_OFF);
 				mCamera.setParameters(parameters);
+				//ibFlashLight.setImageResource(R.drawable.buttonoff);
 			}
-		}*/
+		}
 		
 		// Set background color
-		colorscreenControl.setBackgroundColor(Color.BLACK);
+		//lflashlightcontrol.setBackgroundColor(Color.BLACK);
 		
 		// Revert to original brightness
-		setBrightness(oriBrightnessValue);
+		//setBrightness(oriBrightnessValue);
 		
 		// Self awareness
 		flashlightStatus = false;
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		adView_1.resume();
+	}
+	
+	@Override
+	protected void onDestroy(){
+		super.onDestroy();
+		adView_1.destroy();
+	}
+	
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+	        String permissions[], int[] grantResults) {
+	    switch (requestCode) {
+	        case 14: {
+	            // If request is cancelled, the result arrays are empty.
+	            if (grantResults.length > 0
+	                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+	                // permission was granted, yay! Do the
+	                // contacts-related task you need to do.
+	            	toggleFlashLight();
+
+	            } else {
+
+	                // permission denied, boo! Disable the
+	                // functionality that depends on this permission.
+	            	Toast.makeText(this,(R.string.givePermission), Toast.LENGTH_LONG).show();
+	            	
+	            }
+	            return;
+	        }
+
+	        // other 'case' lines to check for other
+	        // permissions this app might request
+	    }
 	}
 }

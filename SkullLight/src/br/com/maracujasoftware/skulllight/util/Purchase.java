@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package br.com.maracujasoftware.flashlight.util;
+package br.com.maracujasoftware.skulllight.util;
 
 import org.json.JSONException;
 import org.json.JSONObject;

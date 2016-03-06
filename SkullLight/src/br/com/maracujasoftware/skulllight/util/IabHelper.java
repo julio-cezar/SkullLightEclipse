@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package br.com.maracujasoftware.flashlight.util;
+package br.com.maracujasoftware.skulllight.util;
 
 import android.app.Activity;
 import android.app.PendingIntent;

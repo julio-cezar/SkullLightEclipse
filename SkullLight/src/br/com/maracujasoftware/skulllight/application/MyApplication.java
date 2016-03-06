@@ -1,6 +1,6 @@
-package br.com.maracujasoftware.flashlight.application;
+package br.com.maracujasoftware.skulllight.application;
 
-import br.com.maracujasoftware.flashlight.util.IabHelper;
+import br.com.maracujasoftware.skulllight.util.IabHelper;
 import android.app.Application;
 
 public class MyApplication extends Application {

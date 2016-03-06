@@ -1,55 +1,58 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
 
-import java.io.IOException;
-
+import br.com.maracujasoftware.skulllight.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.os.Bundle;
 import android.provider.Settings.SettingNotFoundException;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class ScreenActivity extends Activity {
+public class ColorScreenActivity extends Activity {
 	
 	Integer oriBrightnessValue;
 	Boolean flashlightStatus = false; // false = off, true = on
 	//Camera mCamera = null;
 	Parameters parameters;
-	LinearLayout screenControl;
+	LinearLayout colorscreenControl;
 	SurfaceView preview;
 	SurfaceHolder mHolder;
+	String cor;
+	TextView tvcolor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// Remove title bar
-			this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-						
-			super.onCreate(savedInstanceState);
-			
-			// Retrieve the brightness value for future use
-			try {
-				oriBrightnessValue = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS);
-			} catch (SettingNotFoundException e) {
-				e.printStackTrace();
-			}
-				
-		setContentView(R.layout.activity_screen);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+					
+		super.onCreate(savedInstanceState);
 		
-		screenControl = (LinearLayout) findViewById(R.id.screencontrol);
-		preview = (SurfaceView) findViewById(R.id.Screenpreview);
+		// Retrieve the brightness value for future use
+		try {
+			oriBrightnessValue = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS);
+		} catch (SettingNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		setContentView(R.layout.activity_color_screen);
+		
+		cor = getIntent().getExtras().getString("cor");
+		
+		colorscreenControl = (LinearLayout) findViewById(R.id.colorscreencontrol);
+		preview = (SurfaceView) findViewById(R.id.colorpreview);
 		mHolder = preview.getHolder();
+		
+		tvcolor = (TextView) findViewById(R.id.tvColorScreen);
 
-		screenControl.setOnClickListener(new LinearLayout.OnClickListener(){
+		colorscreenControl.setOnClickListener(new LinearLayout.OnClickListener(){
 			
 			@Override
 			public void onClick(View arg0) {
@@ -75,7 +78,7 @@ public class ScreenActivity extends Activity {
 			turnOffFlashLight();
 			
 			// Turn off the cam if it is on
-		/*	if (mCamera != null) {
+			/*if (mCamera != null) {
 				mCamera.release();
 				mCamera = null;
 			}*/
@@ -148,7 +151,23 @@ public class ScreenActivity extends Activity {
 		}
 		
 		// Set background color
-		screenControl.setBackgroundColor(Color.WHITE);
+		
+		if(cor.equals("BLUE")) {
+			colorscreenControl.setBackgroundColor(Color.BLUE);
+			tvcolor.setTextColor(Color.BLUE);
+		}
+		else if (cor.equals("GREEN")) {
+			colorscreenControl.setBackgroundColor(Color.GREEN);
+			tvcolor.setTextColor(Color.GREEN);
+		}
+		else if (cor.equals("RED")) {
+			colorscreenControl.setBackgroundColor(Color.RED);
+			tvcolor.setTextColor(Color.RED);
+		}
+		else if (cor.equals("YELLOW")) {
+			colorscreenControl.setBackgroundColor(Color.YELLOW);
+			tvcolor.setTextColor(Color.YELLOW);
+		}		
 		
 		// Set brightness to max
 		setBrightness(100);
@@ -172,7 +191,7 @@ public class ScreenActivity extends Activity {
 		}*/
 		
 		// Set background color
-		screenControl.setBackgroundColor(Color.BLACK);
+		colorscreenControl.setBackgroundColor(Color.BLACK);
 		
 		// Revert to original brightness
 		setBrightness(oriBrightnessValue);

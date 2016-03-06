@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Best Flashlight</string>
-    <string name="title_activity_dashboard">Melhor Lanterna</string>
+    <string name="app_name">Caveira iluminada</string>
+    <string name="title_activity_dashboard">Caveira iluminada</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_flash">Lanterna de LED</string>
-    <string name="title_activity_screen">Tela como Lanterna</string>
-    <string name="title_activity_color_screen">Tela em COR</string>
+    <string name="title_activity_flash">Caveira LED</string>
+    <string name="title_activity_screen">Caveira como Lanterna</string>
+    <string name="title_activity_color_screen">+ Caveiras</string>
     <string name="title_activity_donation">Doação</string>
-    <string name="title_activity_color_dashboard">Escolha a Cor</string>
+    <string name="title_activity_color_dashboard">Escolha a Caveira</string>
     
 	<string name="flashlight">Lanterna</string>
 	<string name="donationText">Os desenvolvedores desse app amam suco de maracujá e de laranja. Se você gostou desse aplicativo sinta-se livre para nos pagar um suco :)</string>

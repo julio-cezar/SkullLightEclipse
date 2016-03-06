@@ -143,7 +143,7 @@
            android:layout_width="fill_parent"
            android:layout_height="wrap_content" 
            ads:adSize="BANNER"
-           ads:adUnitId="ca-app-pub-7040951679419231/3367200308"/>
+           ads:adUnitId="ca-app-pub-7040951679419231/7899864300"/>
      </FrameLayout>
 
 </RelativeLayout>

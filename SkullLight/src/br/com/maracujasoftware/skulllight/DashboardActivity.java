@@ -1,4 +1,6 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
+
+import br.com.maracujasoftware.skulllight.R;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;

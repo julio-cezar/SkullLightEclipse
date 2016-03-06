@@ -1,14 +1,12 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
 
-import br.com.maracujasoftware.flashlight.R;
-
+import br.com.maracujasoftware.skulllight.R;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
-import br.com.maracujasoftware.flashlight.FlashlightActivity;
 
 public class FlashlightWidgetProvider extends AppWidgetProvider {
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {

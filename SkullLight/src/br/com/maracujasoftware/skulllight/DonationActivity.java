@@ -1,14 +1,15 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import br.com.maracujasoftware.flashlight.application.MyApplication;
-import br.com.maracujasoftware.flashlight.util.IabHelper;
-import br.com.maracujasoftware.flashlight.util.IabResult;
-import br.com.maracujasoftware.flashlight.util.Inventory;
-import br.com.maracujasoftware.flashlight.util.Purchase;
+import br.com.maracujasoftware.skulllight.R;
+import br.com.maracujasoftware.skulllight.application.MyApplication;
+import br.com.maracujasoftware.skulllight.util.IabHelper;
+import br.com.maracujasoftware.skulllight.util.IabResult;
+import br.com.maracujasoftware.skulllight.util.Inventory;
+import br.com.maracujasoftware.skulllight.util.Purchase;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;

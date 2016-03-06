@@ -1,4 +1,6 @@
-package br.com.maracujasoftware.flashlight;
+package br.com.maracujasoftware.skulllight;
+
+import br.com.maracujasoftware.skulllight.R;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -28,7 +30,7 @@ public class ColorDashboardActivity extends Activity {
 	    adView_1.loadAd(adRequest);
 	    
 	    interstitial = new InterstitialAd(this);
-		interstitial.setAdUnitId("ca-app-pub-7040951679419231/4167779103");
+		interstitial.setAdUnitId("ca-app-pub-7040951679419231/9376597501");
 		interstitial.loadAd(adRequest);
 	}
 	
