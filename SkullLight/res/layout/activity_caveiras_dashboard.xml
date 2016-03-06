@@ -15,6 +15,14 @@
         android:text="Flashlight now"
         android:gravity="center"
         android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/textView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Escolha sua caveira!"
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
       </LinearLayout>
        
        <ScrollView
@@ -38,19 +46,17 @@
 
             <Button
                 android:id="@+id/colorred"
-                android:text="RED"
                 style="@style/style_botoes"
-                android:background="@drawable/red"
+                android:background="@drawable/seletor_caveira1"
                 android:onClick="selecionarOpcao"
                 
                  />
 
             <Button
                 android:id="@+id/colorblue"
-                android:text="BLUE"
                 style="@style/style_botoes"
                 android:layout_marginLeft="35dp"
-                android:background="@drawable/blue"
+                android:background="@drawable/seletor_caveira2"
                 android:onClick="selecionarOpcao"
                 />
                         
@@ -62,17 +68,15 @@
 
             <Button
                 android:id="@+id/colorgreen"
-                android:text="GREEN"
                 style="@style/style_botoes"
-                android:background="@drawable/green"
+                android:background="@drawable/seletor_caveira3"
                 android:onClick="selecionarOpcao"
                  />
             <Button
                 android:id="@+id/coloryellow"
                 style="@style/style_botoes"
-                android:text="YELLOW"
                 android:layout_marginLeft="35dp"
-                android:background="@drawable/yellow"
+                android:background="@drawable/seletor_caveira4"
                 android:onClick="selecionarOpcao"
                  />
         </LinearLayout>

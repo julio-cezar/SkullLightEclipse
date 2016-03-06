@@ -14,7 +14,15 @@
         android:layout_alignParentTop="true"
         android:text="Flashlight now"
         android:gravity="center"
-        android:orientation="horizontal" >      
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escolha sua caveira!"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+      
     </LinearLayout>
     
     <ScrollView
@@ -39,7 +47,7 @@
 	                android:id="@+id/bt_flash"
 	                android:text="@string/flashlight"
 	                style="@style/style_botoes"
-	                android:background="@drawable/seletor_lantarna"
+	                android:background="@drawable/caveira1"
 	                android:onClick="selecionarOpcao"
 	                 />
 	
@@ -48,7 +56,7 @@
 	                android:text="@string/screen"
 	                style="@style/style_botoes"
 	                android:layout_marginLeft="35dp"
-	                android:background="@drawable/seletor_screen"
+	                android:background="@drawable/caveira2"
 	                android:onClick="selecionarOpcao"
 	                />
                         
@@ -62,7 +70,7 @@
                 android:id="@+id/bt_color"
                 android:text="@string/colorscreen"
                 style="@style/style_botoes"
-                android:background="@drawable/seletor_color"
+                android:background="@drawable/caveira3"
                 android:onClick="selecionarOpcao"
                  />
             <Button
@@ -70,7 +78,7 @@
                 style="@style/style_botoes"
                 android:text="@string/payjuice"
                 android:layout_marginLeft="35dp"
-                android:background="@drawable/seletor_juice"
+                android:background="@drawable/caveira4"
                 android:onClick="selecionarOpcao"
                  />
         </LinearLayout>

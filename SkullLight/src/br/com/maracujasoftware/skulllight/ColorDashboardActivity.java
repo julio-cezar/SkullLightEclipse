@@ -20,7 +20,7 @@ public class ColorDashboardActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_color_dashboard);
+		setContentView(R.layout.activity_caveiras_dashboard);
 		
 		adView_1 = (AdView)this.findViewById(R.id.adViewColorDashboard);
 	    AdRequest adRequest = new AdRequest.Builder()
