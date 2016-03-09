@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class ColorDashboardActivity extends Activity {
+public class CaveiraDashboardActivity extends Activity {
 	private AdView adView_1;
 	private InterstitialAd interstitial;
 	
@@ -36,28 +36,28 @@ public class ColorDashboardActivity extends Activity {
 	
 	public void selecionarOpcao(View view) {
 		Intent i;
-		switch (view.getId()) {		
+		/*switch (view.getId()) {		
 		case R.id.colorred:
-			i = new Intent(ColorDashboardActivity.this, ColorScreenActivity.class);
+			i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
 			i.putExtra("cor", "RED");
 			startActivity(i);
 			break;
 		case R.id.colorblue:
-			 i = new Intent(ColorDashboardActivity.this, ColorScreenActivity.class);
+			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
 			 i.putExtra("cor", "BLUE");
 			startActivity(i);
 			break;
 		case R.id.colorgreen:
-			 i = new Intent(ColorDashboardActivity.this, ColorScreenActivity.class);
+			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
 			 i.putExtra("cor", "GREEN");
 			startActivity(i);
 			break;
 		case R.id.coloryellow:
-			 i = new Intent(ColorDashboardActivity.this, ColorScreenActivity.class);
+			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
 			 i.putExtra("cor", "YELLOW");
 			startActivity(i);
 			break;
-		}
+		}*/
 	}
 	
 	@Override

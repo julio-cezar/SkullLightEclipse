@@ -71,7 +71,7 @@
            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="br.com.maracujasoftware.skulllight.ScreenActivity"
+            android:name="br.com.maracujasoftware.skulllight.SkullActivity"
             android:label="@string/title_activity_screen" 
             android:screenOrientation="portrait">
         </activity>
@@ -86,7 +86,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="br.com.maracujasoftware.skulllight.ColorDashboardActivity"
+            android:name="br.com.maracujasoftware.skulllight.CaveiraDashboardActivity"
             android:label="@string/title_activity_color_dashboard" 
             android:screenOrientation="portrait">
         </activity>

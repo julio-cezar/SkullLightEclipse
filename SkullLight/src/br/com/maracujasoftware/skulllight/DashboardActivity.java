@@ -67,11 +67,11 @@ public class DashboardActivity extends Activity {
 			startActivity(i);
 			break;
 		case R.id.bt_screen:
-			 i = new Intent(DashboardActivity.this, ScreenActivity.class);
+			 i = new Intent(DashboardActivity.this, SkullActivity.class);
 			startActivity(i);
 			break;
-		case R.id.bt_color:
-			 i = new Intent(DashboardActivity.this, ColorDashboardActivity.class);
+		case R.id.bt_more:
+			 i = new Intent(DashboardActivity.this, CaveiraDashboardActivity.class);
 			startActivity(i);
 			break;
 		case R.id.bt_doacao:

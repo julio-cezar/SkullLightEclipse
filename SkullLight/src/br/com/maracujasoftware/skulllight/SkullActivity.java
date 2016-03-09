@@ -18,15 +18,17 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class ScreenActivity extends Activity {
+public class SkullActivity extends Activity {
 	
 	Integer oriBrightnessValue;
 	Boolean flashlightStatus = false; // false = off, true = on
 	//Camera mCamera = null;
 	Parameters parameters;
-	LinearLayout screenControl;
+	//LinearLayout screenControl;
+	private Button bt_toggle_skull;
 	SurfaceView preview;
 	SurfaceHolder mHolder;
 	
@@ -44,13 +46,14 @@ public class ScreenActivity extends Activity {
 				e.printStackTrace();
 			}
 				
-		setContentView(R.layout.activity_screen);
-		
-		screenControl = (LinearLayout) findViewById(R.id.screencontrol);
+		setContentView(R.layout.activity_skull);
+		//screenControl = (LinearLayout) findViewById(R.id.screencontrol);
+		bt_toggle_skull = (Button) findViewById(R.id.bt_toggle_skull);
 		preview = (SurfaceView) findViewById(R.id.Screenpreview);
 		mHolder = preview.getHolder();
 
-		screenControl.setOnClickListener(new LinearLayout.OnClickListener(){
+
+		bt_toggle_skull.setOnClickListener(new View.OnClickListener(){
 			
 			@Override
 			public void onClick(View arg0) {
@@ -148,8 +151,9 @@ public class ScreenActivity extends Activity {
 			//mCamera.setParameters(parameters);
 		}
 		
-		// Set background color
-		screenControl.setBackgroundColor(Color.WHITE);
+		// Set background color	
+		bt_toggle_skull.setBackgroundResource(R.drawable.caveira2_acesa);
+		//screenControl.setBackgroundColor(Color.WHITE);
 		
 		// Set brightness to max
 		setBrightness(100);
@@ -173,7 +177,8 @@ public class ScreenActivity extends Activity {
 		}*/
 		
 		// Set background color
-		screenControl.setBackgroundColor(Color.BLACK);
+		bt_toggle_skull.setBackgroundResource(R.drawable.caveira2);
+		//screenControl.setBackgroundColor(Color.BLACK);
 		
 		// Revert to original brightness
 		setBrightness(oriBrightnessValue);

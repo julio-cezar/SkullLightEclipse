@@ -20,7 +20,6 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Escolha sua caveira!"
             android:textAppearance="?android:attr/textAppearanceLarge" />
       
     </LinearLayout>
@@ -67,8 +66,8 @@
             android:layout_marginTop="30dp" >
 
             <Button
-                android:id="@+id/bt_color"
-                android:text="@string/colorscreen"
+                android:id="@+id/bt_more"
+                android:text="@string/moreSkull"
                 style="@style/style_botoes"
                 android:background="@drawable/caveira3"
                 android:onClick="selecionarOpcao"

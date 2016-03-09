@@ -43,13 +43,14 @@
 	    
         </LinearLayout>
         -->
+
      <Button
-        android:id="@+id/bt_toggle_flashlight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/seletor_caveira4" />
+         android:id="@+id/bt_toggle_flashlight"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/propaganda"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/seletor_caveira1" />
         
 	<FrameLayout
          android:id="@+id/propaganda"
@@ -58,7 +59,7 @@
          android:layout_alignParentBottom="true"
          android:layout_alignParentLeft="true"
          android:layout_alignParentRight="true"
-         android:background="#263238">
+         android:background="#000000">
          
        <com.google.android.gms.ads.AdView
            android:id="@+id/adViewFlashlight"

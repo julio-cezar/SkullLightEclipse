@@ -20,7 +20,7 @@
              android:id="@+id/textView1"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Escolha sua caveira!"
+             android:text="@string/chooseSkull"
              android:textAppearance="?android:attr/textAppearanceLarge" />
 
       </LinearLayout>
@@ -41,7 +41,7 @@
         android:gravity="center"
         android:orientation="vertical" >
         
-        <LinearLayout
+      <!--    <LinearLayout
             style="@style/style_layout" >
 
             <Button
@@ -79,7 +79,7 @@
                 android:background="@drawable/seletor_caveira4"
                 android:onClick="selecionarOpcao"
                  />
-        </LinearLayout>
+        </LinearLayout>-->
     	
        <!-- <TextView
 	         android:id="@+id/colorred"
