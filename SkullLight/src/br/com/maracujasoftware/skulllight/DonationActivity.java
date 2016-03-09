@@ -30,7 +30,7 @@ public class DonationActivity extends Activity {
 	// CONSTANTS
 		private static final String[] PRODUCT_IDS = new String[]{"p_donation_1",
 			"p_donation_2", "p_donation_3"};
-		private static final String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp1OWfCjTi+1gJTa9Hcpj4pfnFc0eGEhF97l5qUOzWY/5Bk+awTr5X6SttRnIakj4MoPzRZoILZ97AWhIgZmd4SWm/7xnH2tt5IXWF+J49E7BzkLNv0msHgYAJs4PBQaJuBgMMsVe1XO8BMi/is4LY8B3ITLcpq4/8tF2TYSIngp+fk6Zep8U1AFxhKcuFC8iQGELurPusT+6Fe/eAFRjKrAZN6E9HpzT/7AruaAxgNc697psabkEv6QYqDtvyjdLFiqoFshGh4F/NtM5BmNaoOrXBR3zSsiDasVdjQ7wltd5tg7kB6svcuD8w69LWv4BbWsrpPP9Z8FK2CQUb3GfGQIDAQAB";
+		private static final String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3LCKRFtbNO2MbMeUCVPKv2WzpDJJXpm/7iODcYakWyIhGmXSza2aKaC7bP8eQvv4WcRscreO4Jaf46j6AarnWwrsXjGvQDiHHxCqWMm3nLdYT31xQlxT/IHQ5ynBVbcOcG7XHaPskxNVsd/V1hBrs4yAhdVaONcxf7PzNKEg0D/f+8w0ZOvIXaqWS5pGE+uJ4Ble2UMwo8UBSVtRnRLUaRIiqmYFMhB6WMexHTrBHKq+Jfru4VDeIBTTxLLv2hX3PqUnPwhxrMmbfXkVJLLl/qYqw7jwp7hOVut4PMIL4/tfuLhR46Yk2oaFPpb7xkm1ieLsCLR7Oq1Ed/PJxwMb2QIDAQAB";
 	
 		// VAR. LISTENERS
 				private IabHelper.QueryInventoryFinishedListener mQueryInventoryFinishedListener = new IabHelper.QueryInventoryFinishedListener(){

@@ -202,6 +202,7 @@ public class FlashActivity extends Activity {
 		
 		// Set background color
 	//	lflashlightcontrol.setBackgroundColor(Color.WHITE);
+		bt_toggle_flashlight.setBackgroundResource(R.drawable.caveira_acesa);
 		
 		// Set brightness to max
 		//setBrightness(100);
@@ -227,6 +228,7 @@ public class FlashActivity extends Activity {
 		
 		// Set background color
 		//lflashlightcontrol.setBackgroundColor(Color.BLACK);
+		bt_toggle_flashlight.setBackgroundResource(R.drawable.caveira1);
 		
 		// Revert to original brightness
 		//setBrightness(oriBrightnessValue);

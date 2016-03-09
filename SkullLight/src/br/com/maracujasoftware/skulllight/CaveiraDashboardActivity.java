@@ -36,28 +36,28 @@ public class CaveiraDashboardActivity extends Activity {
 	
 	public void selecionarOpcao(View view) {
 		Intent i;
-		/*switch (view.getId()) {		
-		case R.id.colorred:
-			i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
-			i.putExtra("cor", "RED");
+		switch (view.getId()) {		
+		case R.id.cav1:
+			i = new Intent(CaveiraDashboardActivity.this, MoreSkullActivity.class);
+			i.putExtra("skull", "skull1");
 			startActivity(i);
 			break;
-		case R.id.colorblue:
-			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
-			 i.putExtra("cor", "BLUE");
+		case R.id.cav2:
+			 i = new Intent(CaveiraDashboardActivity.this, MoreSkullActivity.class);
+			 i.putExtra("skull", "skull2");
 			startActivity(i);
 			break;
-		case R.id.colorgreen:
-			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
-			 i.putExtra("cor", "GREEN");
+		case R.id.cav3:
+			 i = new Intent(CaveiraDashboardActivity.this, MoreSkullActivity.class);
+			 i.putExtra("skull", "skull3");
 			startActivity(i);
 			break;
-		case R.id.coloryellow:
-			 i = new Intent(CaveiraDashboardActivity.this, ColorScreenActivity.class);
-			 i.putExtra("cor", "YELLOW");
+		case R.id.cav4:
+			 i = new Intent(CaveiraDashboardActivity.this, MoreSkullActivity.class);
+			 i.putExtra("skull", "skull4");
 			startActivity(i);
 			break;
-		}*/
+		}
 	}
 	
 	@Override

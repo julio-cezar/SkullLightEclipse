@@ -13,20 +13,22 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ColorScreenActivity extends Activity {
+public class MoreSkullActivity extends Activity {
 	
 	Integer oriBrightnessValue;
 	Boolean flashlightStatus = false; // false = off, true = on
 	//Camera mCamera = null;
 	Parameters parameters;
-	LinearLayout colorscreenControl;
+	//LinearLayout colorscreenControl;
+	private Button bt_toggle_moreSkull;
 	SurfaceView preview;
 	SurfaceHolder mHolder;
-	String cor;
-	TextView tvcolor;
+	String skull;
+	//TextView tvcolor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,17 +44,39 @@ public class ColorScreenActivity extends Activity {
 			e.printStackTrace();
 		}
 		
-		setContentView(R.layout.activity_color_screen);
+		setContentView(R.layout.activity_more_skull);
 		
-		cor = getIntent().getExtras().getString("cor");
+		skull = getIntent().getExtras().getString("skull");
 		
-		colorscreenControl = (LinearLayout) findViewById(R.id.colorscreencontrol);
+		//colorscreenControl = (LinearLayout) findViewById(R.id.colorscreencontrol);
+		bt_toggle_moreSkull = (Button) findViewById(R.id.bt_toggle_moreSkull);
 		preview = (SurfaceView) findViewById(R.id.colorpreview);
 		mHolder = preview.getHolder();
 		
-		tvcolor = (TextView) findViewById(R.id.tvColorScreen);
+		//tvcolor = (TextView) findViewById(R.id.tvColorScreen);
+		
+		if(skull.equals("skull1")) {
+			//colorscreenControl.setBackgroundColor(Color.BLUE);
+			//tvcolor.setTextColor(Color.BLUE);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira1);
+		}
+		else if (skull.equals("skull2")) {
+			//colorscreenControl.setBackgroundColor(Color.GREEN);
+			//tvcolor.setTextColor(Color.GREEN);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2);
+		}
+		else if (skull.equals("skull3")) {
+			//colorscreenControl.setBackgroundColor(Color.RED);
+			//tvcolor.setTextColor(Color.RED);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3);
+		}
+		else if (skull.equals("skull4")) {
+			//colorscreenControl.setBackgroundColor(Color.YELLOW);
+			//tvcolor.setTextColor(Color.YELLOW);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4);
+		}
 
-		colorscreenControl.setOnClickListener(new LinearLayout.OnClickListener(){
+		bt_toggle_moreSkull.setOnClickListener(new View.OnClickListener(){
 			
 			@Override
 			public void onClick(View arg0) {
@@ -152,21 +176,25 @@ public class ColorScreenActivity extends Activity {
 		
 		// Set background color
 		
-		if(cor.equals("BLUE")) {
-			colorscreenControl.setBackgroundColor(Color.BLUE);
-			tvcolor.setTextColor(Color.BLUE);
+		if(skull.equals("skull1")) {
+			//colorscreenControl.setBackgroundColor(Color.BLUE);
+			//tvcolor.setTextColor(Color.BLUE);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira_acesa);
 		}
-		else if (cor.equals("GREEN")) {
-			colorscreenControl.setBackgroundColor(Color.GREEN);
-			tvcolor.setTextColor(Color.GREEN);
+		else if (skull.equals("skull2")) {
+			//colorscreenControl.setBackgroundColor(Color.GREEN);
+			//tvcolor.setTextColor(Color.GREEN);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2_acesa);
 		}
-		else if (cor.equals("RED")) {
-			colorscreenControl.setBackgroundColor(Color.RED);
-			tvcolor.setTextColor(Color.RED);
+		else if (skull.equals("skull3")) {
+			//colorscreenControl.setBackgroundColor(Color.RED);
+			//tvcolor.setTextColor(Color.RED);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3_acesa);
 		}
-		else if (cor.equals("YELLOW")) {
-			colorscreenControl.setBackgroundColor(Color.YELLOW);
-			tvcolor.setTextColor(Color.YELLOW);
+		else if (skull.equals("skull4")) {
+			//colorscreenControl.setBackgroundColor(Color.YELLOW);
+			//tvcolor.setTextColor(Color.YELLOW);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4_acesa);
 		}		
 		
 		// Set brightness to max
@@ -191,7 +219,27 @@ public class ColorScreenActivity extends Activity {
 		}*/
 		
 		// Set background color
-		colorscreenControl.setBackgroundColor(Color.BLACK);
+		//colorscreenControl.setBackgroundColor(Color.BLACK);
+		if(skull.equals("skull1")) {
+			//colorscreenControl.setBackgroundColor(Color.BLUE);
+			//tvcolor.setTextColor(Color.BLUE);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira1);
+		}
+		else if (skull.equals("skull2")) {
+			//colorscreenControl.setBackgroundColor(Color.GREEN);
+			//tvcolor.setTextColor(Color.GREEN);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2);
+		}
+		else if (skull.equals("skull3")) {
+			//colorscreenControl.setBackgroundColor(Color.RED);
+			//tvcolor.setTextColor(Color.RED);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3);
+		}
+		else if (skull.equals("skull4")) {
+			//colorscreenControl.setBackgroundColor(Color.YELLOW);
+			//tvcolor.setTextColor(Color.YELLOW);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4);
+		}	
 		
 		// Revert to original brightness
 		setBrightness(oriBrightnessValue);

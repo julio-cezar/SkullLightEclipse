@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.maracujasoftware.skulllight"
-    android:versionCode="1"
+    android:versionCode="6"
     android:versionName="1.0" >
 
     <!-- API levels -->
@@ -76,7 +76,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="br.com.maracujasoftware.skulllight.ColorScreenActivity"
+            android:name="br.com.maracujasoftware.skulllight.MoreSkullActivity"
             android:label="@string/title_activity_color_screen"
             android:screenOrientation="portrait" >
         </activity>
