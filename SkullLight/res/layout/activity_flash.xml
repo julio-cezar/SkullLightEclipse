@@ -50,7 +50,7 @@
          android:layout_height="wrap_content"
          android:layout_above="@+id/propaganda"
          android:layout_centerHorizontal="true"
-         android:background="@drawable/caveira1" />
+         android:background="@drawable/caveira_apagada" />
         
 	<FrameLayout
          android:id="@+id/propaganda"

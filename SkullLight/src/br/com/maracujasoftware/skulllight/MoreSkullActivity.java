@@ -58,22 +58,22 @@ public class MoreSkullActivity extends Activity {
 		if(skull.equals("skull1")) {
 			//colorscreenControl.setBackgroundColor(Color.BLUE);
 			//tvcolor.setTextColor(Color.BLUE);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira1);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira_apagada);
 		}
 		else if (skull.equals("skull2")) {
 			//colorscreenControl.setBackgroundColor(Color.GREEN);
 			//tvcolor.setTextColor(Color.GREEN);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2_apagada);
 		}
 		else if (skull.equals("skull3")) {
 			//colorscreenControl.setBackgroundColor(Color.RED);
 			//tvcolor.setTextColor(Color.RED);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3_apagada);
 		}
 		else if (skull.equals("skull4")) {
 			//colorscreenControl.setBackgroundColor(Color.YELLOW);
 			//tvcolor.setTextColor(Color.YELLOW);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4_apagada);
 		}
 
 		bt_toggle_moreSkull.setOnClickListener(new View.OnClickListener(){
@@ -223,22 +223,22 @@ public class MoreSkullActivity extends Activity {
 		if(skull.equals("skull1")) {
 			//colorscreenControl.setBackgroundColor(Color.BLUE);
 			//tvcolor.setTextColor(Color.BLUE);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira1);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira_apagada);
 		}
 		else if (skull.equals("skull2")) {
 			//colorscreenControl.setBackgroundColor(Color.GREEN);
 			//tvcolor.setTextColor(Color.GREEN);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira2_apagada);
 		}
 		else if (skull.equals("skull3")) {
 			//colorscreenControl.setBackgroundColor(Color.RED);
 			//tvcolor.setTextColor(Color.RED);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira3_apagada);
 		}
 		else if (skull.equals("skull4")) {
 			//colorscreenControl.setBackgroundColor(Color.YELLOW);
 			//tvcolor.setTextColor(Color.YELLOW);
-			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4);
+			bt_toggle_moreSkull.setBackgroundResource(R.drawable.caveira4_apagada);
 		}	
 		
 		// Revert to original brightness

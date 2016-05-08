@@ -177,7 +177,7 @@ public class SkullActivity extends Activity {
 		}*/
 		
 		// Set background color
-		bt_toggle_skull.setBackgroundResource(R.drawable.caveira2);
+		bt_toggle_skull.setBackgroundResource(R.drawable.caveira2_apagada);
 		//screenControl.setBackgroundColor(Color.BLACK);
 		
 		// Revert to original brightness
